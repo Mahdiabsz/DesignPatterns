@@ -1,4 +1,5 @@
 ﻿using DesignPatterns;
+using DesignPatterns.Builder;
 using DesignPatterns.Decorator;
 using DesignPatterns.Strategy;
 
@@ -23,5 +24,18 @@ Console.ReadLine();
 WebApplication webApplication = new WebApplication(BrowserType.IE);
 webApplication.SendAsyncRequestToServer("https://www.google.com");
 Console.Write("Press enter to process builder pattern : ");
+Console.ReadLine();
+#endregion
+
+#region Builder pattern
+var userBuilder = new UserBuilder();
+User user = userBuilder
+    .WithName("mahdi")
+    .WithFamily("abbaszadeh")
+    .WithPhone("12345678910")
+    .WithEmail("mahdi@gmail.com")
+    .WithAddress("test address");
+Console.WriteLine("Name: {0}, Family: {1}, Phone: {2}, Email: {3}, Address: {4}",
+    user.Name, user.Family, user.Phone, user.Email, user.Address);
 Console.ReadLine();
 #endregion
