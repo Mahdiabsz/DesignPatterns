@@ -1,5 +1,6 @@
 ﻿using DesignPatterns;
 using DesignPatterns.Decorator;
+using DesignPatterns.Strategy;
 
 #region Decorator pattern
 IPizza pizza = new Pizza();
@@ -14,6 +15,13 @@ Console.ReadLine();
 #region Singleton pattern
 Singleton singleton = Singleton.Instance;
 Console.WriteLine(singleton.PrintText());
-Console.Write("Press enter to process singleton pattern : ");
+Console.Write("Press enter to process strategy pattern : ");
+Console.ReadLine();
+#endregion
+
+#region Strategy pattern
+WebApplication webApplication = new WebApplication(BrowserType.IE);
+webApplication.SendAsyncRequestToServer("https://www.google.com");
+Console.Write("Press enter to process builder pattern : ");
 Console.ReadLine();
 #endregion
