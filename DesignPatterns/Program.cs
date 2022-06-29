@@ -9,21 +9,21 @@ IPizza cheesePizza = new CheeseDecorator(pizza);
 IPizza onionPizza = new OnionDecorator(cheesePizza);
 IPizza tomatoPizza = new TomatoDecorator(onionPizza);
 Console.WriteLine(tomatoPizza.GetPizza());
-Console.Write("Press enter to process singleton pattern : ");
+Console.Write("this was decorator pattern. Press enter to process singleton pattern : ");
 Console.ReadLine();
 #endregion
 
 #region Singleton pattern
 Singleton singleton = Singleton.Instance;
 Console.WriteLine(singleton.PrintText());
-Console.Write("Press enter to process strategy pattern : ");
+Console.Write("this was singleton pattern. Press enter to process strategy pattern : ");
 Console.ReadLine();
 #endregion
 
 #region Strategy pattern
 WebApplication webApplication = new WebApplication(BrowserType.IE);
 webApplication.SendAsyncRequestToServer("https://www.google.com");
-Console.Write("Press enter to process builder pattern : ");
+Console.Write("this was strategy pattern. Press enter to process builder pattern : ");
 Console.ReadLine();
 #endregion
 
@@ -37,5 +37,6 @@ User user = userBuilder
     .WithAddress("test address");
 Console.WriteLine("Name: {0}, Family: {1}, Phone: {2}, Email: {3}, Address: {4}",
     user.Name, user.Family, user.Phone, user.Email, user.Address);
+Console.Write("this was builder pattern. Press enter to process builder pattern : ");
 Console.ReadLine();
 #endregion
