@@ -1,15 +1,18 @@
 ﻿using DesignPatterns;
+using DesignPatterns.Adapter;
 using DesignPatterns.Builder;
 using DesignPatterns.Decorator;
 using DesignPatterns.Observer;
 using DesignPatterns.Strategy;
 
 Console.WriteLine("please select one of patterns from below : ");
-Console.WriteLine("1) Decorator pattern \n" +
+Console.WriteLine(
+    "1) Decorator pattern \n" +
     "2) Singleton pattern \n" +
     "3) Strategy pattern \n" +
     "4) Builder pattern \n" +
-    "5) Observer pattern \n");
+    "5) Observer pattern \n" +
+    "6) Adapter pattern \n");
 
 int patternNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -29,6 +32,9 @@ switch (patternNumber)
         break;
     case 5:
         ObserverPattern();
+        break;
+    case 6:
+        AdapterPattern();
         break;
 }
 
@@ -94,6 +100,17 @@ void ObserverPattern()
     weatherStation.Temperature = 29.6f;
     weatherStation.Temperature = 14.3f;
 
+    Console.ReadLine();
+}
+#endregion
+
+#region Adapter pattern
+void AdapterPattern()
+{
+    //in this example base class give us xml data but we want json because of that we use adapter pattern to implement this functionality
+    IEmployee emp = new EmployeeAdapter();
+    string value = emp.GetAllEmployees();
+    Console.WriteLine(value);
     Console.ReadLine();
 }
 #endregion

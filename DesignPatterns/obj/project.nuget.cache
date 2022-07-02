@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ErQBzkP3FxhxtCYIjFtKpEGOG+ZRWWAYzW4gegBdFHz1XF/JDm08vILNB7KFAnDJlmqWn5Zn07C2bnK3yVqzPA==",
+  "dgSpecHash": "0nNUfoL0JpCwmuJju/7evlsOSxFXuDTe/aCMqta96Vrn/iCk4haSujI1n+DESkWaNXklNlhXawXdPumusEpDhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mahdi\\source\\repos\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mahdi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
