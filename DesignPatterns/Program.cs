@@ -1,7 +1,9 @@
 ﻿using DesignPatterns;
+using DesignPatterns.AbstractFactory;
 using DesignPatterns.Adapter;
 using DesignPatterns.Builder;
 using DesignPatterns.Decorator;
+using DesignPatterns.Factory;
 using DesignPatterns.Observer;
 using DesignPatterns.Strategy;
 
@@ -12,7 +14,9 @@ Console.WriteLine(
     "3) Strategy pattern \n" +
     "4) Builder pattern \n" +
     "5) Observer pattern \n" +
-    "6) Adapter pattern \n");
+    "6) Adapter pattern \n" +
+    "7) Factory pattern \n" +
+    "8) Abstract factory pattern");
 
 int patternNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -35,6 +39,12 @@ switch (patternNumber)
         break;
     case 6:
         AdapterPattern();
+        break;
+    case 7:
+        FactoryPattern();
+        break;
+    case 8:
+        AbstractFactoryPattern();
         break;
 }
 
@@ -111,6 +121,26 @@ void AdapterPattern()
     IEmployee emp = new EmployeeAdapter();
     string value = emp.GetAllEmployees();
     Console.WriteLine(value);
+    Console.ReadLine();
+}
+#endregion
+
+#region Factory pattern
+void FactoryPattern()
+{
+    var nav = new DesignPatterns.Factory.NavigationBar();
+    var drp = new DesignPatterns.Factory.DropdownMenu();
+    Console.WriteLine("We use factory pattern here");
+    Console.ReadLine();
+}
+#endregion
+
+#region Abstract factory pattern
+void AbstractFactoryPattern()
+{
+    var nav = new DesignPatterns.AbstractFactory.NavigationBar(new Android());
+    var drp = new DesignPatterns.AbstractFactory.DropdownMenu(new Android());
+    Console.WriteLine("We use abstract factory pattern here");
     Console.ReadLine();
 }
 #endregion
